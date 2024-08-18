@@ -36,4 +36,52 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
+
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "stylua",
+        "shellcheck",
+        "shfmt",
+        "flake8",
+      },
+    },
+  },
+
+  {
+    "mhinz/vim-grepper",
+    opts = {
+      highlight = 1,
+    },
+    keys = {
+
+      { "@g", "<Plug>(GrepperOperator)", mode = { "n", "x" }, desc = "Search with grepper" },
+      {
+        "@b",
+        "<cmd>Grepper -tool rg -buffer -noprompt -highlight -cword<cr><cr>",
+        desc = "Search word under cursor in current file",
+      },
+      {
+        "@o",
+        "<cmd>Grepper -tool rg -buffers -noprompt -highlight -cword<cr><cr>",
+        desc = "Search word under cursor in open files",
+      },
+    },
+    config = function() end,
+  },
+
+  {
+    "MattesGroeger/vim-bookmarks",
+    keys = {
+      { "@m", "<Plug>BookmarkToggle", mode = "n", desc = "Toogle bookmark" },
+      { "@a", "<Plug>BookmarkShowAll", mode = "n", desc = "Show all bookmark" },
+      { "@c", "<Plug>BookmarkClear", mode = "n", desc = "Clear bookmarks in current file" },
+      { "@x", "<Plug>BookmarkClearAll", mode = "n", desc = "Clear all bookmarks" },
+    },
+    opts = {
+      bookmark_no_default_key_mappings = 1,
+    },
+    config = function() end,
+  },
 }
