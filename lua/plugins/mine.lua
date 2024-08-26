@@ -164,4 +164,14 @@ return {
     event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
     priority = 1000,
   },
+
+  {
+    "https://code.byted.org/chenjiaqi.cposture/codeverse.vim.git",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeverse").setup({})
+    end,
+  },
 }
