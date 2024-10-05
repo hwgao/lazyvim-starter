@@ -3,3 +3,9 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>o", "<C-w><C-o>", { desc = "Single window" })
+vim.keymap.set(
+  "n",
+  "<leader>r",
+  ":cd %:h | cd `git rev-parse --show-toplevel` | pwd<CR>",
+  { desc = "Change to Git root directory" }
+)
