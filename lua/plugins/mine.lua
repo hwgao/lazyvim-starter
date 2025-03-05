@@ -159,5 +159,15 @@ return {
     opt = true, -- Set this to true if the plugin is optional
     event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
     priority = 1000,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        clangd = {
+          filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" },
+        },
+      },
+    },
   }
 }
