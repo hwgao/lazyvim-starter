@@ -11,15 +11,6 @@ return {
   },
 
   {
-    "yuriescl/minimal-bookmarks.nvim",
-    keys = {
-      { "<leader>mm", "<cmd>MinimalBookmarksAdd<cr>", desc = "Add a bookmark" },
-      { "<leader>ma", "<cmd>MinimalBookmarksToggle<cr>", desc = "Toggle bookmarks window" },
-      { "<leader>me", "<cmd>MinimalBookmarksEdit<cr>", desc = "Edit bookmarks" },
-    },
-  },
-
-  {
     "christoomey/vim-tmux-navigator",
     cmd = {
       "TmuxNavigateLeft",
@@ -55,15 +46,19 @@ return {
       highlight = 1,
     },
     keys = {
-
-      { "@g", "<Plug>(GrepperOperator)", mode = { "n", "x" }, desc = "Search with grepper" },
+      { "<leader>Gg", "<Plug>(GrepperOperator)", mode = { "n", "x" }, desc = "Search with grepper" },
       {
-        "@b",
+        "<leader>GG",
+        "<cmd>Grepper -tool rg -noprompt -highlight -cword<cr><cr>",
+        desc = "Search word under cursor from root directory",
+      },
+      {
+        "<leader>Gb",
         "<cmd>Grepper -tool rg -buffer -noprompt -highlight -cword<cr><cr>",
         desc = "Search word under cursor in current file",
       },
       {
-        "@o",
+        "<leader>Go",
         "<cmd>Grepper -tool rg -buffers -noprompt -highlight -cword<cr><cr>",
         desc = "Search word under cursor in open files",
       },
@@ -74,13 +69,14 @@ return {
   {
     "MattesGroeger/vim-bookmarks",
     keys = {
-      { "@m", "<Plug>BookmarkToggle", mode = "n", desc = "Toogle bookmark" },
-      { "@a", "<Plug>BookmarkShowAll", mode = "n", desc = "Show all bookmark" },
-      { "@c", "<Plug>BookmarkClear", mode = "n", desc = "Clear bookmarks in current file" },
-      { "@x", "<Plug>BookmarkClearAll", mode = "n", desc = "Clear all bookmarks" },
+      { "<leader>BB", "<Plug>BookmarkToggle", mode = "n", desc = "Toogle bookmark" },
+      { "<leader>Ba", "<Plug>BookmarkShowAll", mode = "n", desc = "Show all bookmark" },
+      { "<leader>Bc", "<Plug>BookmarkClear", mode = "n", desc = "Clear bookmarks in current file" },
+      { "<leader>Bx", "<Plug>BookmarkClearAll", mode = "n", desc = "Clear all bookmarks" },
     },
     opts = {
       bookmark_no_default_key_mappings = 1,
+      bookmark_save_per_working_dir = 1,
     },
     config = function() end,
   },
@@ -163,15 +159,5 @@ return {
     opt = true, -- Set this to true if the plugin is optional
     event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
     priority = 1000,
-  },
-
-  {
-    "https://code.byted.org/chenjiaqi.cposture/codeverse.vim.git",
-    dependencies = {
-      "hrsh7th/nvim-cmp",
-    },
-    config = function()
-      require("codeverse").setup({})
-    end,
-  },
+  }
 }
