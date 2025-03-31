@@ -164,4 +164,14 @@ return {
     event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
     priority = 1000,
   },
+
+  {
+    "saghen/blink.cmp",
+    opts = {
+      -- signature = { enabled = true },
+      keymap = {
+        preset = "super-tab",
+      },
+    },
+  },
 }
