@@ -11,15 +11,6 @@ return {
   },
 
   {
-    "yuriescl/minimal-bookmarks.nvim",
-    keys = {
-      { "<leader>mm", "<cmd>MinimalBookmarksAdd<cr>", desc = "Add a bookmark" },
-      { "<leader>ma", "<cmd>MinimalBookmarksToggle<cr>", desc = "Toggle bookmarks window" },
-      { "<leader>me", "<cmd>MinimalBookmarksEdit<cr>", desc = "Edit bookmarks" },
-    },
-  },
-
-  {
     "christoomey/vim-tmux-navigator",
     cmd = {
       "TmuxNavigateLeft",
@@ -163,15 +154,5 @@ return {
     opt = true, -- Set this to true if the plugin is optional
     event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
     priority = 1000,
-  },
-
-  {
-    "saghen/blink.cmp",
-    opts = {
-      -- signature = { enabled = true },
-      keymap = {
-        preset = "super-tab",
-      },
-    },
   },
 }
