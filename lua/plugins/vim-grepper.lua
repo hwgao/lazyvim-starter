@@ -5,16 +5,16 @@ return {
   },
   keys = {
 
-    { "@g", "<Plug>(GrepperOperator)", mode = { "n", "x" }, desc = "Search with grepper" },
+    { "@g", "<Plug>(GrepperOperator)", mode = { "n", "x" }, desc = "Grapper: Operator" },
     {
-      "@b",
+      "@w",
       "<cmd>Grepper -tool rg -buffer -noprompt -highlight -cword<cr><cr>",
-      desc = "Search word under cursor in current file",
+      desc = "Grepper: Word under cursor in current file",
     },
     {
       "@o",
       "<cmd>Grepper -tool rg -buffers -noprompt -highlight -cword<cr><cr>",
-      desc = "Search word under cursor in open files",
+      desc = "Grepper: Word under cursor in open files",
     },
   },
   config = function() end,
