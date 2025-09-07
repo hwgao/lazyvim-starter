@@ -3,3 +3,5 @@
 -- Add any additional options here
 vim.opt.wrap = true
 vim.g.ai_cmp = false
+-- Prevent conceal from hiding text
+vim.opt.conceallevel = 0
