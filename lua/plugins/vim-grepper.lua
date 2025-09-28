@@ -54,23 +54,14 @@ return {
         desc = "Search word under cursor in open files",
         mode = "n",
       },
+      {
+        "<leader>G*",
+        function()
+          vim.cmd.match(string.format("Visual /%s/", vim.fn.expand("<cword>")))
+        end,
+        desc = "highlight word under cursor",
+        mode = "n",
+      },
     })
   end,
 }
-
---   keys = {
---
---     { "@g", "<Plug>(GrepperOperator)", mode = { "n", "x" }, desc = "Grapper: Operator" },
---     {
---       "@w",
---       "<cmd>Grepper -tool rg -buffer -noprompt -highlight -cword<cr><cr>",
---       desc = "Grepper: Word under cursor in current file",
---     },
---     {
---       "@o",
---       "<cmd>Grepper -tool rg -buffers -noprompt -highlight -cword<cr><cr>",
---       desc = "Grepper: Word under cursor in open files",
---     },
---   },
---   config = function() end,
--- }
