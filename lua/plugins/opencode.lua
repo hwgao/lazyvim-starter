@@ -13,9 +13,9 @@ return {
     vim.opt.autoread = true
 
     require("which-key").add({
-      { "<leader>o", group = "opencode" },
+      { "<leader>O", group = "opencode" },
       {
-        "<leader>ot",
+        "<leader>Ot",
         function()
           require("opencode").toggle()
         end,
@@ -23,7 +23,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>oA",
+        "<leader>OA",
         function()
           require("opencode").ask()
         end,
@@ -31,7 +31,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>oa",
+        "<leader>Oa",
         function()
           require("opencode").ask("@cursor: ")
         end,
@@ -39,7 +39,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>oa",
+        "<leader>Oa",
         function()
           require("opencode").ask("@selection: ")
         end,
@@ -47,7 +47,7 @@ return {
         mode = "v",
       },
       {
-        "<leader>o+",
+        "<leader>O+",
         function()
           require("opencode").append_prompt("@buffer")
         end,
@@ -55,7 +55,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>o+",
+        "<leader>O+",
         function()
           require("opencode").append_prompt("@selection")
         end,
@@ -63,7 +63,7 @@ return {
         mode = "v",
       },
       {
-        "<leader>on",
+        "<leader>On",
         function()
           require("opencode").command("session_new")
         end,
@@ -71,7 +71,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>oy",
+        "<leader>Oy",
         function()
           require("opencode").command("messages_copy")
         end,
@@ -95,7 +95,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>os",
+        "<leader>Os",
         function()
           require("opencode").select()
         end,
@@ -103,7 +103,7 @@ return {
         mode = { "n", "v" },
       },
       {
-        "<leader>oe",
+        "<leader>Oe",
         function()
           require("opencode").prompt("Explain @cursor and its context")
         end,
