@@ -5,9 +5,9 @@ return {
   },
   config = function()
     require("which-key").add({
-      { "<leader>k", group = "bookmarks" },
+      { "<leader>B", group = "bookmarks" },
       {
-        "<leader>kk",
+        "<leader>Bk",
         function()
           vim.cmd.BookmarkToggle()
         end,
@@ -15,7 +15,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>ka",
+        "<leader>Ba",
         function()
           vim.cmd.BookmarkShowAll()
         end,
@@ -23,7 +23,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>kc",
+        "<leader>Bc",
         function()
           vim.cmd.BookmarkClear()
         end,
@@ -31,7 +31,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>kx",
+        "<leader>Bx",
         function()
           vim.cmd.BookmarkClearAll()
         end,
