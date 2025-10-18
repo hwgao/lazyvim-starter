@@ -55,11 +55,11 @@ return {
         mode = "n",
       },
       {
-        "<leader>G*",
+        "<leader>Gr",
         function()
-          vim.cmd.match(string.format("Visual /%s/", vim.fn.expand("<cword>")))
+          vim.cmd("copen")
         end,
-        desc = "highlight word under cursor",
+        desc = "Open quickfix window",
         mode = "n",
       },
     })

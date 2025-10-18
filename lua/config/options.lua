@@ -7,6 +7,10 @@ if vim.g.vscode then
   vim.opt.wrap = true
   vim.opt.linebreak = true
 else
+  -- don't show ai suggestions in cmp
+  vim.g.ai_cmp = false
+  vim.opt.relativenumber = false
+
   vim.opt.wrap = true
   -- control if adding ai completion to nvim-cmp
   -- vim.g.ai_cmp = false
