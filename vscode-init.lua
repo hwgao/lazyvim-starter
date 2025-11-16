@@ -28,8 +28,9 @@ end)
 map("n", "<space>z", function()
   vscode.call("workbench.action.toggleZenMode")
 end)
+-- depend on vscode-search-under-cursor extension
 map("n", "<space>/", function()
-  vscode.call("workbench.action.findInFiles", { query = vim.fn.expand("<cword>") })
+  vscode.call("extension.searchUnderCursor")
 end)
 
 -- clipboard copy/paste
