@@ -28,9 +28,9 @@ end)
 map("n", "<space>z", function()
   vscode.call("workbench.action.toggleZenMode")
 end)
--- depend on vscode-search-under-cursor extension
+-- Enable search: Seed with nearest word
 map("n", "<space>/", function()
-  vscode.call("extension.searchUnderCursor")
+  vscode.call("workbench.action.findInFiles")
 end)
 
 -- clipboard copy/paste
