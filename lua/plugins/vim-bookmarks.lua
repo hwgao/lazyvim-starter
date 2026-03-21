@@ -1,8 +1,8 @@
 return {
   "MattesGroeger/vim-bookmarks",
-  opts = {
-    bookmark_no_default_key_mappings = 1,
-  },
+  init = function()
+    vim.g.bookmark_no_default_key_mappings = 1
+  end,
   config = function()
     require("which-key").add({
       { "<leader>B", group = "bookmarks" },

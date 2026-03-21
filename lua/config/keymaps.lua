@@ -11,23 +11,26 @@ if vim.g.vscode then
   return
 end
 
-require("which-key").add({
-  {
-    "<leader>r",
-    ":cd %:h | cd `git rev-parse --show-toplevel` | pwd<CR>",
-    desc = "Change to Git root directory",
-    mode = "n",
-  },
-  {
-    "<leader>F",
-    ":lua Snacks.terminal(nil, { cmd = LazyVim.root(), win = { style = 'float', border = 'rounded' }})<CR>",
-    desc = "Open floating terminal",
-    mode = "n",
-  },
-  {
-    "<leader>o",
-    "<C-w><C-o>",
-    desc = "Single window",
-    mode = "n",
-  },
-})
+local ok, wk = pcall(require, "which-key")
+if ok then
+  wk.add({
+    {
+      "<leader>r",
+      ":cd %:h | cd `git rev-parse --show-toplevel` | pwd<CR>",
+      desc = "Change to Git root directory",
+      mode = "n",
+    },
+    {
+      "<leader>F",
+      ":lua Snacks.terminal(nil, { cwd = LazyVim.root(), win = { style = 'float', border = 'rounded' }})<CR>",
+      desc = "Open floating terminal",
+      mode = "n",
+    },
+    {
+      "<leader>o",
+      "<C-w><C-o>",
+      desc = "Single window",
+      mode = "n",
+    },
+  })
+end
