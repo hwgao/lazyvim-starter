@@ -1,11 +1,11 @@
 return {
   "mhinz/vim-grepper",
-  opts = {
-    highlight = 1,
-  },
+  init = function()
+    vim.g.grepper = { highlight = 1 }
+  end,
   config = function()
     require("which-key").add({
-      { "<leader>G", group = "grapper" },
+      { "<leader>G", group = "grepper" },
       {
         "<leader>GG",
         function()
