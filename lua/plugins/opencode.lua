@@ -42,11 +42,12 @@ return {
     vim.keymap.set("n", "<leader>OA", function()
       require("opencode").command("agent_cycle")
     end, { desc = "Cycle selected agent" })
-    vim.keymap.set("n", "<S-C-u>", function()
-      require("opencode").command("messages_half_page_up")
-    end, { desc = "Messages half page up" })
-    vim.keymap.set("n", "<S-C-d>", function()
-      require("opencode").command("messages_half_page_down")
-    end, { desc = "Messages half page down" })
+    -- Operator keymaps: use <leader>O prefix to avoid go/goo overlap
+    vim.keymap.set({ "n", "x" }, "<leader>Oo", function()
+      return require("opencode").operator("@this ")
+    end, { desc = "Add range to opencode", expr = true })
+    vim.keymap.set("n", "<leader>OO", function()
+      return require("opencode").operator("@this ") .. "_"
+    end, { desc = "Add line to opencode", expr = true })
   end,
 }
