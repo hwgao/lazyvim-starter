@@ -11,8 +11,6 @@ if vim.g.vscode then
   return
 end
 
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true })
-
 local ok, wk = pcall(require, "which-key")
 if ok then
   wk.add({
