@@ -7,7 +7,7 @@ return {
     require("which-key").add({
       { "<leader>B", group = "bookmarks" },
       {
-        "<leader>Bb",
+        "<leader>BB",
         function()
           vim.cmd.BookmarkToggle()
         end,
