@@ -31,7 +31,7 @@ return {
         mode = "n",
       },
       {
-        "<leader>G/",
+        "<leader>Gw",
         function()
           vim.cmd.Grepper({ args = { "-tool", "rg", "-noprompt", "-highlight", "-cword" } })
         end,
