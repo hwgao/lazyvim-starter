@@ -1,6 +1,7 @@
 return {
   "olimorris/codecompanion.nvim",
   version = "^19.0.0",
+  lazy = false,
   keys = {
     { "<leader>C", nil, desc = "AI" },
     { "<leader>CI", "<cmd>CodeCompanion<cr>", desc = "CodeCompanion Inline" },

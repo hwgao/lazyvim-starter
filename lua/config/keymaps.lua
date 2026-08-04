@@ -34,3 +34,5 @@ if ok then
     },
   })
 end
+
+vim.cmd("cnoreabbrev CC CodeCompanion")
