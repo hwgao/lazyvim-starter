@@ -9,7 +9,7 @@ return {
       {
         "<leader>GG",
         function()
-          vim.cmd.Grepper({ args = { "-tool", "rg", "-highlight" } })
+          vim.cmd.Grepper({ args = { "-tool", "rg", "-highlight", "-cword" } })
         end,
         desc = "Search in root directory",
         mode = "n",
@@ -17,7 +17,7 @@ return {
       {
         "<leader>Gg",
         function()
-          vim.cmd.Grepper({ args = { "-tool", "git", "-highlight" } })
+          vim.cmd.Grepper({ args = { "-tool", "git", "-highlight", "-cword" } })
         end,
         desc = "Search in the repository",
         mode = "n",

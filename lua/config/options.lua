@@ -26,6 +26,5 @@ else
   -- Disable default mappings for markdown-wiki.nvim
   vim.g.mw_no_mappings = 1
 
-  -- disable diagnostics by default
-  vim.diagnostic.enable(false)
+  -- vim.diagnostic.enable(false)
 end
