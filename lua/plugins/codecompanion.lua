@@ -3,11 +3,11 @@ return {
   version = "^19.0.0",
   lazy = false,
   keys = {
-    { "<leader>C", nil, desc = "AI" },
-    { "<leader>CI", "<cmd>CodeCompanion<cr>", desc = "CodeCompanion Inline" },
-    { "<leader>CC", "<cmd>CodeCompanionChat<cr>", desc = "CodeCompanion Chat" },
-    { "<leader>CL", "<cmd>CodeCompanionCLI<cr>", desc = "Open CLI interaction" },
-    { "<leader>CA", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions" },
+    { "<leader>C", nil, desc = "AI", mode = { "n", "v" } }, -- Added mode
+    { "<leader>CI", "<cmd>CodeCompanion<cr>", desc = "CodeCompanion Inline", mode = { "n", "v" } },
+    { "<leader>CC", "<cmd>CodeCompanionChat<cr>", desc = "CodeCompanion Chat", mode = { "n", "v" } },
+    { "<leader>CL", "<cmd>CodeCompanionCLI<cr>", desc = "Open CLI interaction", mode = { "n", "v" } },
+    { "<leader>CA", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions", mode = { "n", "v" } },
   },
   opts = {
     interactions = {
