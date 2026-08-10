@@ -3,7 +3,14 @@ return {
   version = "^19.0.0",
   lazy = false,
   keys = {
-    { "<leader>C", nil, desc = "AI", mode = { "n", "v" } }, -- Added mode
+    {
+      "<leader>C",
+      function()
+        print("AI command executed")
+      end,
+      desc = "CodeCompanion",
+      mode = { "n", "v" },
+    },
     { "<leader>CI", "<cmd>CodeCompanion<cr>", desc = "CodeCompanion Inline", mode = { "n", "v" } },
     { "<leader>CC", "<cmd>CodeCompanionChat<cr>", desc = "CodeCompanion Chat", mode = { "n", "v" } },
     { "<leader>CL", "<cmd>CodeCompanionCLI<cr>", desc = "Open CLI interaction", mode = { "n", "v" } },
