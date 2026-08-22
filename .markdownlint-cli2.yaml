@@ -1,0 +1,4 @@
+# .markdownlint-cli2.yaml
+config:
+  MD013: false
+  MD033: false # allow inline HTML if desired

@@ -1,10 +1,10 @@
 return {
   "mfussenegger/nvim-lint",
-  opts = function(_, opts)
-    opts.linters = opts.linters or {}
-    opts.linters.markdownlint = {
-      args = { "--config", vim.fn.expand("~/.markdownlint-cli2.yaml"), "--" },
-    }
-    return opts
-  end,
+  opts = {
+    linters = {
+      ["markdownlint-cli2"] = {
+        prepend_args = { "--config", vim.fn.expand("~/.config/nvim/.markdownlint-cli2.yaml") },
+      },
+    },
+  },
 }
