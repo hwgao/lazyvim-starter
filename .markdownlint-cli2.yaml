@@ -1,4 +1,6 @@
 # .markdownlint-cli2.yaml
 config:
   MD013: false
+  MD024:
+    sibling_only: true # heading duplication is allowed for non-sibling headings
   MD033: false # allow inline HTML if desired
