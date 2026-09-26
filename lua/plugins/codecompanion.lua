@@ -15,14 +15,9 @@ return {
     { "<leader>Cc", "<cmd>CodeCompanionChat<cr>", desc = "CodeCompanion Chat", mode = { "n", "v" } },
     { "<leader>Cl", "<cmd>CodeCompanionCLI<cr>", desc = "Open CLI interaction", mode = { "n", "v" } },
     { "<leader>Ca", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions", mode = { "n", "v" } },
-    {
-      "<leader>Ce",
-      "<cmd>CodeCompanion /explain<cr>",
-      desc = "Explain how selected code in a buffer works",
-      mode = { "v" },
-    },
-    { "<leader>Cf", "<cmd>CodeCompanion /fix<cr>", desc = "Fix the selected code", mode = { "v" } },
-    { "<leader>Cp", "<cmd>CodeCompanion /lsp<cr>", desc = "Explain the LSP diagnostics", mode = { "v" } },
+    { "<leader>Ce", "<cmd>CodeCompanion #{buffer} /explain<cr>", desc = "Explain the selected code", mode = { "v" } },
+    { "<leader>Cf", "<cmd>CodeCompanion #{buffer} /fix<cr>", desc = "Fix the selected code", mode = { "v" } },
+    { "<leader>Cp", "<cmd>CodeCompanion #{buffer} /lsp<cr>", desc = "Explain the LSP diagnostics", mode = { "v" } },
   },
   opts = {
     interactions = {
