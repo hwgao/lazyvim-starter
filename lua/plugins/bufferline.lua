@@ -2,9 +2,11 @@ return {
   "akinsho/bufferline.nvim",
   opts = {
     options = {
-      indicator = {
-        style = "underline", -- Enables the underline indicator for the active buffer
-      },
+      mode = "buffers",
+      separator_style = "slant",
+      diagnostics = "nvim_lsp",
+      show_close_icon = false,
+      show_buffer_close_icons = false,
     },
   },
 }

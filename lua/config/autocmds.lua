@@ -26,3 +26,10 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set("v", "<space>X", ":lua<cr>", { desc = "Execute selected lua code" })
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "css", "html", "vue" },
+  callback = function()
+    vim.opt_local.iskeyword:append("-")
+  end,
+})
