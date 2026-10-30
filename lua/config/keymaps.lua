@@ -21,34 +21,42 @@ if ok then
       mode = "n",
     },
     {
-      "<leader>F",
-      ":lua Snacks.terminal(nil, { cwd = LazyVim.root(), win = { style = 'float', border = 'rounded' }})<CR>",
-      desc = "Open floating terminal",
-      mode = "n",
-    },
-    {
       "<leader>o",
       "<C-w><C-o>",
       desc = "Single window",
+      mode = "n",
+    },
+    {
+      "<leader>T",
+      ":lua Snacks.terminal(nil, { cwd = LazyVim.root(), win = { style = 'float', border = 'rounded' }})<CR>",
+      desc = "Open floating terminal",
       mode = "n",
     },
   })
 end
 
 vim.cmd("cnoreabbrev CC CodeCompanion")
+vim.cmd("cnoreabbrev CCC CodeCompanionCLI")
 
 -- [C]odeCompanion [A]dd
 vim.keymap.set({ "n", "v" }, "<LocalLeader>ca", function()
-  return require("codecompanion").cli("#{this}", { focus = false })
+  return require("codecompanion").cli("#{this}", { focus = true })
 end, { desc = "Add context to the CLI agent" })
+
 -- [C]odeCompanion [D]iagnostics
 vim.keymap.set("n", "<LocalLeader>cd", function()
-  return require("codecompanion").cli("#{diagnostics} Can you fix these?", { focus = false, submit = true })
+  return require("codecompanion").cli("#{diagnostics} Can you fix these?", { focus = true, submit = true })
 end, { desc = "Send diagnostics to CLI agent" })
+
+-- [C]odeCompanion [E]xplain
+vim.keymap.set("v", "<LocalLeader>ce", function()
+  return require("codecompanion").cli("Can you explain this code?", { focus = true, submit = true })
+end, { desc = "Explain the selected code" })
+
 -- [C]odeCompanion [T]erminal
 vim.keymap.set("n", "<LocalLeader>ct", function()
   return require("codecompanion").cli(
     "#{terminal} Sharing the output from the terminal. Can you fix it?",
-    { focus = false, submit = true }
+    { focus = true, submit = true }
   )
 end, { desc = "Send terminal output to CLI agent" })
