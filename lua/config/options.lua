@@ -16,13 +16,13 @@ else
     vim.g.pumblend = 0
 
     -- Disable animations for Neovide
-    vim.g.neovide_position_animation_length = 0
-    vim.g.neovide_cursor_animation_length = 0.00
-    vim.g.neovide_cursor_trail_size = 0
-    vim.g.neovide_cursor_animate_in_insert_mode = false
-    vim.g.neovide_cursor_animate_command_line = false
-    vim.g.neovide_scroll_animation_far_lines = 0
-    vim.g.neovide_scroll_animation_length = 0.00
+    -- vim.g.neovide_position_animation_length = 0
+    -- vim.g.neovide_cursor_animation_length = 0.00
+    -- vim.g.neovide_cursor_trail_size = 0
+    -- vim.g.neovide_cursor_animate_in_insert_mode = false
+    -- vim.g.neovide_cursor_animate_command_line = false
+    -- vim.g.neovide_scroll_animation_far_lines = 0
+    -- vim.g.neovide_scroll_animation_length = 0.00
 
     -- Map Command+S to save, Command+C to copy, and Command+V to paste
     local function save()
@@ -68,4 +68,7 @@ else
       vim.opt.formatoptions:remove({ "c", "r", "o" })
     end,
   })
+
+  -- Stop LazyVim from automatically changing your working directory to the project root
+  vim.g.root_spec = { "cwd" }
 end

@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "css", "html", "vue" },
+  pattern = { "css", "html", "vue", "scss", "less", "xml", "yaml" },
   callback = function()
     vim.opt_local.iskeyword:append("-")
   end,
